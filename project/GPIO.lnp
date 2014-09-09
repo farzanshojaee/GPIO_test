@@ -1,0 +1,11 @@
+--cpu Cortex-M4.fp
+".\startup_stm32f40xx.o"
+".\main.o"
+".\system_stm32f4xx.o"
+".\misc.o"
+".\stm32f4xx_gpio.o"
+".\stm32f4xx_rcc.o"
+--strict --scatter ".\GPIO.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\GPIO.map" -o .\GPIO.axf
